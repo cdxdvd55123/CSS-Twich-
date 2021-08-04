@@ -1,4 +1,4 @@
-# CSS-Twich外觀練習
+# CSS-Twitch外觀練習
 
 以 Twtich 為原型，練習做出簡單的頁面。
 
