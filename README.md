@@ -9,9 +9,9 @@ https://cdxdvd55123.github.io/CSSpractice-Twitch/twitch
 
 更新CSS 
 
-使用  transition-timing-function 做線性漸變
-      filter 做增加亮度濾鏡
-      box-shadow 做陰影
+使用  transition-timing-function 做線性漸變、 
+      filter 做增加亮度濾鏡、 
+      box-shadow 做陰影、 
 
 8/4
 
