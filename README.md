@@ -5,6 +5,14 @@
 
 https://cdxdvd55123.github.io/CSSpractice-Twitch/twitch
 
+8/6
+
+更新CSS 
+
+使用  transition-timing-function 做線性漸變
+      filter 做增加亮度濾鏡
+      box-shadow 做陰影
+
 8/4
 
 1.每一個方格的寬度為 300 px，高度不限但每個方格的高度一樣，一排有三個方格。
