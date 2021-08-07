@@ -2,8 +2,18 @@
 
 以 Twtich 為原型，練習做出簡單的頁面。
 
-
 https://cdxdvd55123.github.io/CSSpractice-Twitch/twitch
+
+8/7
+
+練習使用CSS預處理器(這裡我使用less)，
+
+把CSS拿到外部，練習使用CSS預處理器less寫，
+
+再把 .less 轉換成 .css 。
+
+p.s.順便修復了漸變效果。
+
 
 8/6
 
