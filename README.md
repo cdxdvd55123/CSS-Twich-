@@ -11,7 +11,7 @@ https://cdxdvd55123.github.io/CSSpractice-Twitch/twitch
 
 尚未完成的部分：
 
-1.上方 topgames 點了拿到的資料還不夠完整所以無法顯示(還沒Callback)。
+1.上方 topgames 點了拿到的資料還不夠完整所以無法顯示(還沒 Callback )。
 
 2.load more results 會拿到重複的資料。
 
