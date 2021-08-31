@@ -4,8 +4,14 @@
 
 https://cdxdvd55123.github.io/CSSpractice-Twitch/twitch
 
-
 8/31
+
+更新排版，改為視窗拉到最下面自動新增，，load more results 還在(提示用)，
+
+尚未完成：topgames 拿到不完整的資料。
+         Search   功能無法使用
+
+8/30
 
 這次更新花了將近一個月的時間才做到一個段落，
 
@@ -16,6 +22,8 @@ https://cdxdvd55123.github.io/CSSpractice-Twitch/twitch
 2.load more results 會拿到重複的資料。
 
 3.拿到資料後的排版。
+
+4.Search 功能無法使用
 
 因為更新間隔比較長，稍微記錄一下過程：
 
