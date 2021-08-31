@@ -2,16 +2,45 @@ const displayTitle = document.querySelector('.display__title');
 const moreResultsBtn = document.querySelector('.display__moreResultsBtn');
 const results = document.querySelector('.row');
 const lis = document.querySelector('.navbar__topGames').children;
-const resultWidth = 440;
+const container = document.querySelector('#streams');
+const resultWidth = 300;
+const state = {};
+const pages = [];
 let after = 0;
 let lastSearchedText = '';
+
+
+
+
+window.addEventListener('scroll', function(e){
+  const scrollTop = window.scrollY;
+  const windowHeight = window.innerHeight;
+  const documentHeight = document.documentElement.offsetHeight;
+  if(scrollTop + windowHeight + 1 >= documentHeight){
+    state.isBottom = true;
+  } else {
+    state.isBottom = false;
+  }
+})
+
+
+Object.defineProperty(state, 'isBottom', {
+  get: function(){
+    return isBottom;
+  },
+  set: function(value){
+    isBottom = value;
+    if(!isBottom) return;
+    addStreams();
+  }
+})
 
 
 
 function initStreams(){
   let queryString = '?language=zh';
   getStreams(queryString, function(streams){
-      streams.find(stream => { queryString += '&id=' + stream.user_id + `&after=${after*20}`})
+      streams.find(stream => { queryString += '&id=' + stream.user_id/* + `&after=${after*20}`*/})
       getUsers(queryString, function(users){
           streams.find(stream => {
             users.find(user => {
@@ -70,6 +99,9 @@ function getStreams(queryString, callback){
             console.log(err);
           }
       const results = JSON.parse(request.response).data;
+      const page = JSON.parse(request.response).pagination.cursor;
+      console.log(page);
+      pages.push(page);
       console.log(results);
       callback(results);
     }
@@ -177,7 +209,7 @@ document.querySelector('.navbar__topGames').addEventListener('click', (e) => {
     }
     getGameName(gameName, showStreamResult);
 });
-  
+
 document.querySelector('.display__moreResultsBtn').addEventListener('click', () => {
     after += 1;
     initStreams(lastSearchedText, showStreamResult);
@@ -193,14 +225,24 @@ function showStreamResult(streams) {
   for (const stream of Object.values(streams)) {
     let previewImgUrl = stream.thumbnail_url;
     previewImgUrl = `${previewImgUrl.slice(0, previewImgUrl.indexOf('{'))}${w}x${h}.jpg`;
-    const templateHTML = `<img class="display__result__previewImg" src="${previewImgUrl}"/>
-      <div class="display__result__info">
-        <img class="display__result__info__channelImg" src="${stream.profile_image_url}"/>
-        <div class="display__result__info__dicriptions">
-          <div class="display__result__info__dicriptions__title">${stream.title}</div>
-          <div class="display__result__info__dicriptions__host">${stream.user_name}</div>
-        </div>
+    const templateHTML = ` <div class="display_results">
+      <div class="preview">
+        <img src="${previewImgUrl}"/>
       </div>
+          <div class="intro">
+              <div class="logo">
+                  <img src="${stream.profile_image_url}"/>
+              </div>
+              <div class="dicriptions">
+                  <div class="title">
+                      ${stream.title}
+                  </div>
+                  <div class="name">
+                      ${stream.user_name}
+                  </div>
+              </div>
+          </div>
+  </div>
     `;
     const newResult = document.createElement('div');
     newResult.setAttribute('onclick', `window.open('https://www.twitch.tv/${stream.user_login}','_blank');`);
@@ -231,4 +273,3 @@ initStreams((err, data) => {
       $row.append(showStreamResult(stream));
   }
 });
-

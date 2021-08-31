@@ -1,5 +1,5 @@
 body {
-  background-image: url(img/background.jpeg);
+  background-image: url("img/background.jpeg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -8,150 +8,141 @@ body {
 header nav img {
 width: 150px;
 }
-.wrapper {
-  height: 100%;
-  max-width: 1920px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  flex-direction: column;
+
+.nav-item{
+text-align: center;
+padding: 5px;
+margin-top: 8px;
+margin-left: 15px;
+}
+.nav-item0{
+text-align: center;
+margin-top: 6px;
+
 }
 
-.navbar {
-  box-sizing: border-box;
-  height: 100px;
-  width: 100%;
-  margin: 0;
-  background: rgba(128, 72, 250, 1);
-  position: fixed;
-  top: 0;
-  overflow: hidden;
-  color: whitesmoke;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-  z-index: 2;
-  font-size: 20px;
+.navbar__topGames{
+justify-content:space-around;
 }
 
-.navbar > .wrapper {
-  justify-content: space-between;
-  align-items: center;
-}
-
-.navbar__title {
-  display: flex;
-}
-
-.navbar__search {
-  margin-left: 8px;
-}
-
-.navbar__topGames {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: row;
-  font-size: 18px;
-}
-
-.navbar__topGames > li {
-  padding: 50px 10px;
-  font-size: 20px;
-}
-
-.navbar__topGames > li:hover, li.active {
-  color: rgba(101, 101, 101, 1);
-  background: whitesmoke;
-  transition: ease-in .2s;
-  cursor: pointer;
+.display__title{
+text-align: center;
+font-size: 20px;
+color: white;
+margin-top: 20px;
 }
 
 
-body .container {
-  padding: 20px;
-  min-height: 100vh;
-  background: rgba(0,0,0,0.5);
+.container{
+height: 100%;
+max-width: 1920px;
+margin: 0 auto;
+margin-top: 20px;
+padding: 0 20px;
+display: flex;
+flex-direction: column;
 }
 .row {
-  margin: 0 auto;
-  width: 1000px;
-}
-.col {
-  background: rgba(11,11,11,0.5);
-  width: 300px;
-  box-sizing: border-box;
-  display: inline-block;
-  margin-right: 20px;
-  margin-top: 20px;
-  border: 1px solid rgba(255,255,255,0.05);
-  transition: all 0.2s ease-in;
-}
-.col:hover {
-  cursor: pointer;
-  filter: brightness(1.5);
-  box-shadow: 5px 5px 20px 5px rgba(0,0,0,0.5);
-}
-.col .preview img {
-  width: 100%;
-}
-.col .bottom {
-  padding: 10px;
-}
-.col .intro {
-  position: relative;
-  color: rgba(255,255,255,0.7);
-}
-.col .intro .desc {
-  position: absolute;
-  top: 5px;
-  left: 70px;
-}
-.col .intro .desc .title {
-  width: 200px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  margin-bottom: 10px;
-}
-.col .intro .logo {
-  width: 50px;
-  border-radius: 50%;
-  overflow: hidden;
-}
-.col .intro .logo img {
-  width: 100%;
+width: 100%;
+display: flex;
+padding: 0 20px;
+flex-wrap: wrap;
 }
 
+
+.display__result {
+width: 340px;
+height: 300px;
+display: inline-block;
+padding: 0 20px;
+cursor: pointer;
+}
+.display__result:hover {
+filter: brightness(1.25);
+transform: scale(1.1);
+transition: all .4s;
+
+}
+.display__results {
+height: 250px;
+width: 300px;
+background: rgba(50, 50, 50);
+display: flex;
+justify-content: flex-start;
+flex-direction: column;
+margin: 10px 5px;
+filter: brightness(50%);
+}
+
+.intro {
+display: flex;
+align-content: center;
+justify-content: stretch;
+margin: auto 5px;
+}
+
+.logo{
+display: inline-block;
+position: relative;
+top: 5px;
+}
+.logo img{
+display: block;
+height: 50px;
+width: 50px;
+border-radius: 50%;
+margin: 5px;
+background-size: contain;
+background-position: center;
+}
+
+.dicriptions {
+margin: 0 5px;
+color: whitesmoke;
+justify-content:center;
+}
+
+.dicriptions .title {
+margin-top: 5px;
+
+line-height: 1.3em;
+height: 2.5em;
+word-break: break-all;
+overflow: hidden;
+}
+
+.dicriptions .host {
+margin-top: 3px;
+}
+
+
 .display__moreResultsBtn {
-  width: 440px;
-  height: 80px;
-  margin: 8px;
-  background: rgb(59, 97, 207);
-  font-size: 20px;
-  color: white;
-  align-self: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+width: 440px;
+height: 80px;
+margin: 8px;
+background: rgb(59, 97, 207);
+font-size: 20px;
+color: white;
+align-self: center;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 
 .display__moreResultsBtn:hover {
-  color: rgb(59, 97, 207);
-  background: white;
-  cursor: pointer;
-  transition: ease-in .3s;
+color: rgb(59, 97, 207);
+background: white;
+cursor: pointer;
+transition: ease-in .3s;
 }
 
 .footer {
-  max-width: 1920px;
-  height: 50px;
-  background: rgba(128, 72, 250, 1)
+max-width: 1920px;
+height: 50px;
+background: rgba(128, 72, 250, 1)
 }
 
 
 .hide {
-  display: none;
+display: none;
 }
