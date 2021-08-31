@@ -6,7 +6,7 @@ https://cdxdvd55123.github.io/CSSpractice-Twitch/twitch
 
 8/31
 
-更新排版，改為視窗拉到最下面自動新增，，load more results 還在(提示用)，
+更新排版，改為視窗拉到最下面自動新增，load more results 還在(提示用)，
 
 尚未完成：topgames 拿到不完整的資料。
          Search   功能無法使用
