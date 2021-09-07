@@ -227,7 +227,7 @@ function showStreamResult(streams) {
     previewImgUrl = `${previewImgUrl.slice(0, previewImgUrl.indexOf('{'))}${w}x${h}.jpg`;
     const templateHTML = ` <div class="display_results">
       <div class="preview">
-        <img src="${previewImgUrl}"/>
+        <img src="${previewImgUrl}" onload="this.style.opacity=1"/>
       </div>
           <div class="intro">
               <div class="logo">

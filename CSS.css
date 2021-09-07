@@ -84,7 +84,7 @@ margin: auto 5px;
 .logo{
 display: inline-block;
 position: relative;
-top: 5px;
+height: 69px;
 }
 .logo img{
 display: block;
@@ -94,6 +94,7 @@ border-radius: 50%;
 margin: 5px;
 background-size: contain;
 background-position: center;
+position: relative;
 }
 
 .dicriptions {
@@ -119,18 +120,17 @@ margin-top: 3px;
 .display__moreResultsBtn {
 width: 440px;
 height: 80px;
-margin: 8px;
-background: rgb(59, 97, 207);
+margin:auto;
+background: rgb(128, 72, 250, 1);
 font-size: 20px;
 color: white;
-align-self: center;
 display: flex;
 align-items: center;
 justify-content: center;
 }
 
 .display__moreResultsBtn:hover {
-color: rgb(59, 97, 207);
+color: rgb(128, 72, 250, 1);
 background: white;
 cursor: pointer;
 transition: ease-in .3s;
@@ -139,10 +139,33 @@ transition: ease-in .3s;
 .footer {
 max-width: 1920px;
 height: 50px;
-background: rgba(128, 72, 250, 1)
+background: rgba(128, 72, 250, 1);
+margin-top: 20px;
 }
 
 
 .hide {
 display: none;
+}
+
+
+.preview {
+  position: relative;
+  height: 168px;
+  width: 300px;
+}
+
+.preview img {
+  position: relative;
+  opacity: 0;
+  transition: all 0.2s ease-in;
+}
+
+.preview:before {
+  content:'';
+  position: absolute;
+  top:0;left: 0;
+  width: 100%;
+  height: 100%;
+  background:url(img/twitch.jpg);
 }
