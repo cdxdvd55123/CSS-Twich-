@@ -4,6 +4,16 @@
 
 https://cdxdvd55123.github.io/CSSpractice-Twitch/twitch
 
+9/7
+
+更正：
+
+1. load more results 位置。
+
+2. logo div 大小。
+
+新增：實況預覽 placeholder ，logo 沒有使用因為有些人的圖片有去背，會造成預覽圖片會穿出來。
+
 8/31
 
 更新排版，改為視窗拉到最下面自動新增，load more results 還在(提示用)，
