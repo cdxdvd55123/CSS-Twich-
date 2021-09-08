@@ -69,6 +69,7 @@ function addStreams(){
           })
         })
       showStreamResult(streams);
+      document.documentElement.scrollTop=0;
       });
     });
 }
