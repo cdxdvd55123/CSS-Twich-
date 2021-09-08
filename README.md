@@ -4,6 +4,10 @@
 
 https://cdxdvd55123.github.io/CSSpractice-Twitch/twitch
 
+9/8
+
+新增：scrollTop 讓新資料載入後回到最上方，避免重複觸發事件。
+
 9/7
 
 更正：
