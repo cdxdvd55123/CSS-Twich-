@@ -87,7 +87,7 @@ function showTopFiveGames(arr, callback) {
 function getStreams(queryString, callback){
     const api = 'https://api.twitch.tv/helix/streams';
     const clientID = 'qidrkm1b2nf0nq8mpatr6sf4coduv7';
-    const Token = 'bk8d37hf2rtc10fzkdg83185owdsnu';
+    const Token = '7a66oe3pm5ga52k57qiylj4457g1rg';
     const request = new XMLHttpRequest();
     request.open('GET', api + queryString, true);
     request.setRequestHeader('Authorization', 'Bearer ' + Token);
@@ -111,7 +111,7 @@ function getStreams(queryString, callback){
 function getUsers(queryString, callback){
     const api = 'https://api.twitch.tv/helix/users';
     const clientID = 'qidrkm1b2nf0nq8mpatr6sf4coduv7';
-    const Token = 'bk8d37hf2rtc10fzkdg83185owdsnu';
+    const Token = '7a66oe3pm5ga52k57qiylj4457g1rg';
     const request = new XMLHttpRequest();
     request.open('GET', api + queryString, true);
     request.setRequestHeader('Authorization', 'Bearer ' + Token);
@@ -133,7 +133,7 @@ function getUsers(queryString, callback){
 function getTopFiveGames(callback) {
     const api = 'https://api.twitch.tv/helix';
     const clientID = 'qidrkm1b2nf0nq8mpatr6sf4coduv7';
-    const Token = 'bk8d37hf2rtc10fzkdg83185owdsnu'; 
+    const Token = '7a66oe3pm5ga52k57qiylj4457g1rg'; 
     const request = new XMLHttpRequest();
     request.open('GET', `${api}/games/top?first=5`, true);
     request.setRequestHeader('Client-ID', clientID);
@@ -159,7 +159,7 @@ function getTopFiveGames(callback) {
   function getGameName(name, callback) {
     const api = 'https://api.twitch.tv/helix';
     const clientID = 'qidrkm1b2nf0nq8mpatr6sf4coduv7';
-    const Token = 'bk8d37hf2rtc10fzkdg83185owdsnu'; 
+    const Token = '7a66oe3pm5ga52k57qiylj4457g1rg'; 
     const request = new XMLHttpRequest();
     const searchQuery = encodeURI(name);
     request.open('GET', `${api}/search/channels?query=${searchQuery}`, true);
