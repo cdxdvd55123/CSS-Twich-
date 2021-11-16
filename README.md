@@ -4,7 +4,7 @@
 
 https://cdxdvd55123.github.io/CSSpractice-Twitch/twitch
 
-11/16 目前授權過期，無法讀取資料。
+11/16 目前授權過期，無法讀取資料(已更新)。
 
 9/8
 
